@@ -1,0 +1,10 @@
+services:
+  devcontainer:
+    build:
+      dockerfile: .devcontainer/dev.dockerfile
+      context: ../
+      args:
+        UBUNTU_TAG: "24.04"
+        PYTHON_VERSION: "3.12"
+    volumes:
+      - ../:/workspace
